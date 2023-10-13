@@ -1,0 +1,12 @@
+import json
+pathToFile = "./birthday.json"
+pathToFile = "/Users/eduardomolinalopez/Downloads/birthday.json"
+
+# try to open a file and throw an error if not found
+
+try:
+    jsonFile = open(pathToFile, 'r')
+except OSError:
+    print("ERROR: Unable to open the file %s" % pathToFile)
+    exit(-1)
+
