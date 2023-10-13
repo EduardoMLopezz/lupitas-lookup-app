@@ -1,0 +1,34 @@
+import json
+pathToFile = "./birthday.json"
+pathToFile = "/Users/eduardomolinalopez/Downloads/birthday.json"
+
+# try to open a file and throw an error if not found
+
+try:
+    jsonFile = open(pathToFile, 'r')
+except OSError:
+    print("ERROR: Unable to open the file %s" % pathToFile)
+    exit(-1)
+
+# Read the whole json list into a variable
+birthdayList =json.load (jsonFile)
+
+# create an empty dictionary
+
+birthdayDictionary = {}
+elem = birthdayList
+
+# fetch name and birthday
+name = elem["Daniel"]
+birthday = elem["03-15-2004"]
+
+print("name = " + name)
+print("birthday = " + birthday)
+
+birthdayDictionary[name] = birthday
+
+# to print a value in the dictionary by giving it a string.
+# to get user input
+name = input("Enter a name:")
+print ("name =" + name)
+
