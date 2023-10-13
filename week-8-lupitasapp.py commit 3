@@ -1,0 +1,16 @@
+# try to open a file and throw an error if not found
+
+try:
+    jsonFile = open(pathToFile, 'r')
+except OSError:
+    print("ERROR: Unable to open the file %s" % pathToFile)
+    exit(-1)
+
+# Read the whole json list into a variable
+birthdayList =json.load (jsonFile)
+
+# create an empty dictionary
+
+birthdayDictionary = {}
+elem = birthdayList
+
