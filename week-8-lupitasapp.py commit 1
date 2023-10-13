@@ -1,0 +1,4 @@
+import json
+pathToFile = "./birthday.json"
+pathToFile = "/Users/eduardomolinalopez/Downloads/birthday.json"
+
